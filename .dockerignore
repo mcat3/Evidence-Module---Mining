@@ -1,0 +1,8 @@
+.env
+.git
+**/__pycache__
+**/*.pyc
+outputs
+notebooks
+frontend
+**/node_modules

@@ -1,0 +1,12 @@
+# Source files: normalise to LF in the repo and in checkouts (Docker images build on Linux).
+* text=auto eol=lf
+
+# The demo evidence package is SHA-256 sealed: store and check it out byte-for-byte,
+# or the integrity check would fail after a CRLF conversion.
+demo_data/gevra_2021_2024/** -text
+
+*.pdf  binary
+*.png  binary
+*.tif  binary
+*.tiff binary
+*.ico  binary

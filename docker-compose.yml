@@ -1,0 +1,120 @@
+name: terraproof
+
+services:
+  postgis:
+    image: postgis/postgis:16-3.4
+    container_name: terraproof-postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-terraproof}
+      POSTGRES_USER: ${POSTGRES_USER:-terraproof}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-terraproof}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+      - ./infra/postgres/init.sql:/docker-entrypoint-initdb.d/10-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    container_name: terraproof-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  minio:
+    # Official minio/minio images were withdrawn from Docker Hub; Chainguard publishes a free build.
+    image: cgr.dev/chainguard/minio:latest
+    container_name: terraproof-minio
+    restart: unless-stopped
+    command: ["server", "/data", "--console-address", ":9001"]
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-terraproof}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-terraproof-secret}
+    ports:
+      - "${MINIO_API_PORT:-9000}:9000"
+      - "${MINIO_CONSOLE_PORT:-9001}:9001"
+    volumes:
+      - minio_data:/data
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: terraproof-backend:latest
+    container_name: terraproof-api
+    restart: unless-stopped
+    environment: &app_env
+      DATABASE_URL: postgresql://${POSTGRES_USER:-terraproof}:${POSTGRES_PASSWORD:-terraproof}@postgis:5432/${POSTGRES_DB:-terraproof}
+      REDIS_URL: redis://redis:6379/0
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-terraproof}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-terraproof-secret}
+      WORK_DIR: /app/outputs/jobs
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}
+    ports:
+      - "${API_PORT:-8000}:8000"
+    depends_on:
+      postgis:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health', timeout=5)"]
+      interval: 10s
+      timeout: 6s
+      retries: 12
+
+  worker:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: terraproof-backend:latest
+    container_name: terraproof-worker
+    restart: unless-stopped
+    command: ["celery", "-A", "backend.app.celery_app", "worker", "--loglevel=INFO", "--concurrency=1"]
+    environment: *app_env
+    volumes:
+      - job_work:/app/outputs/jobs
+    depends_on:
+      postgis:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_started
+
+  frontend:
+    build:
+      context: ./frontend
+    image: terraproof-frontend:latest
+    container_name: terraproof-frontend
+    restart: unless-stopped
+    environment:
+      API_INTERNAL_URL: http://api:8000
+    ports:
+      - "${FRONTEND_PORT:-3000}:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  job_work:
+  postgis_data:
+  redis_data:
+  minio_data:

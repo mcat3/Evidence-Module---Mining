@@ -1,0 +1,513 @@
+{
+  "site_name": "Gevra Open-Cast Coal Mine, Chhattisgarh",
+  "generated_at": "2026-11-17T13:26:08.709961+00:00",
+  "runtime_s": 169.6,
+  "inputs": {
+    "aoi_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            82.5087814,
+            22.3002421
+          ],
+          [
+            82.586421,
+            22.2995014
+          ],
+          [
+            82.5872386,
+            22.3717471
+          ],
+          [
+            82.509559,
+            22.3724904
+          ],
+          [
+            82.5087814,
+            22.3002421
+          ]
+        ]
+      ]
+    },
+    "target_date": "2024-03-01",
+    "baseline_date": "2021-03-01"
+  },
+  "aoi_area_ha": 6400.0,
+  "crs": "EPSG:32644",
+  "resolution_m": 10.0,
+  "image_bounds_wgs84": [
+    [
+      22.2994392,
+      82.5087748
+    ],
+    [
+      22.3725195,
+      82.5873301
+    ]
+  ],
+  "scenes": {
+    "baseline": {
+      "scene_id": "S2A_44QPK_20210301_1_L2A",
+      "reflectance_scale": 0.0001,
+      "reflectance_offset": 0.0,
+      "catalog": "earth-search",
+      "stac_api": "https://earth-search.aws.element84.com/v1",
+      "acquired": "2021-03-01T05:12:41.134000+00:00",
+      "platform": "sentinel-2a",
+      "mgrs_tile": "44QPK",
+      "processing_baseline": "05.00",
+      "scene_cloud_pct": 0.0004,
+      "aoi_cloud_pct": 0.0,
+      "sun_elevation_deg": 53.139,
+      "sun_azimuth_deg": 140.948027677346,
+      "assets": {
+        "B02": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/B02.tif",
+        "B03": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/B03.tif",
+        "B04": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/B04.tif",
+        "B08": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/B08.tif",
+        "B11": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/B11.tif",
+        "B12": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/B12.tif",
+        "SCL": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/SCL.tif"
+      },
+      "candidates_considered": 13,
+      "meets_aoi_cloud_threshold": true,
+      "requested_date": "2021-03-01"
+    },
+    "target": {
+      "scene_id": "S2B_44QPK_20240229_0_L2A",
+      "reflectance_scale": 0.0001,
+      "reflectance_offset": 0.0,
+      "catalog": "earth-search",
+      "stac_api": "https://earth-search.aws.element84.com/v1",
+      "acquired": "2024-02-29T05:12:39.384000+00:00",
+      "platform": "sentinel-2b",
+      "mgrs_tile": "44QPK",
+      "processing_baseline": "05.10",
+      "scene_cloud_pct": 0.0,
+      "aoi_cloud_pct": 0.0,
+      "sun_elevation_deg": 52.892,
+      "sun_azimuth_deg": 141.170001555169,
+      "assets": {
+        "B02": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/B02.tif",
+        "B03": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/B03.tif",
+        "B04": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/B04.tif",
+        "B08": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/B08.tif",
+        "B11": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/B11.tif",
+        "B12": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/B12.tif",
+        "SCL": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/SCL.tif"
+      },
+      "candidates_considered": 4,
+      "meets_aoi_cloud_threshold": true,
+      "requested_date": "2024-03-01"
+    }
+  },
+  "kpis": {
+    "evidence_reliability_grade": "HIGH",
+    "mean_confidence_pct": 91.4,
+    "pit_expansion_ha": -85.99,
+    "pit_expansion_pct": -14.45,
+    "overburden_change_ha": 95.13,
+    "vegetation_change_ha": 179.44,
+    "vegetation_lost_to_mining_ha": 209.58,
+    "new_stockpiles_detected": 29,
+    "risk_flag_count": 2
+  },
+  "spectral_index_stats": {
+    "baseline": {
+      "ndvi": {
+        "mean": 0.2289,
+        "p10": 0.0624,
+        "p90": 0.4646
+      },
+      "ndwi": {
+        "mean": -0.3109,
+        "p10": -0.5154,
+        "p90": -0.1354
+      },
+      "iron_swir_nir": {
+        "mean": 1.5695,
+        "p10": 1.1485,
+        "p90": 2.0309
+      },
+      "iron_red_blue": {
+        "mean": 1.6196,
+        "p10": 1.2831,
+        "p90": 1.9917
+      }
+    },
+    "target": {
+      "ndvi": {
+        "mean": 0.2428,
+        "p10": 0.0546,
+        "p90": 0.5039
+      },
+      "ndwi": {
+        "mean": -0.3006,
+        "p10": -0.5171,
+        "p90": -0.1056
+      },
+      "iron_swir_nir": {
+        "mean": 1.4073,
+        "p10": 1.0545,
+        "p90": 1.7603
+      },
+      "iron_red_blue": {
+        "mean": 1.3571,
+        "p10": 1.0432,
+        "p90": 1.706
+      }
+    }
+  },
+  "model": {
+    "model": "RandomForestClassifier",
+    "training_strategy": "bootstrapped from spectral rule-based pseudo-labels (both dates pooled)",
+    "pseudo_label_rules": {
+      "water": "(ndwi > 0.10 & swir1 < 0.06) | (swir1 < 0.035 & nir < 0.05)",
+      "pit": "dark non-vegetated (ndvi < 0.18, brightness < 0.10) region wider than 50 m",
+      "haul_roads": "dark non-vegetated (ndvi < 0.18, brightness < 0.13) strip narrower than 50 m & swir1/nir >= 1.4",
+      "overburden": "bare (ndvi < 0.12 & brightness >= 0.15) & swir1/nir < 1.8 & (distance_to_coal <= 300 m | (bare patch >= 20 ha & distance_to_coal <= 1500 m))",
+      "vegetation": "ndvi > 0.45 | (0.18 <= ndvi <= 0.45 & nir >= 0.13 & brightness < 0.20 & distance_to_coal > 300 m) | (bare & (distance_to_coal > 1500 m | (bare patch < 5 ha & distance_to_coal > 500 m)))"
+    },
+    "features": [
+      "blue",
+      "green",
+      "red",
+      "nir",
+      "swir1",
+      "swir2",
+      "ndvi",
+      "ndwi",
+      "iron_swir_nir",
+      "iron_red_blue",
+      "brightness",
+      "ndvi_context_150m",
+      "brightness_context_150m",
+      "distance_to_coal_m"
+    ],
+    "pseudo_labelled_pixels_per_class": {
+      "Undisturbed Vegetation": 476120,
+      "Active Mine Pit / Excavation": 113497,
+      "Overburden / Mineral Stockpile": 117109,
+      "Water / Tailings Pond": 9516,
+      "Haul Roads / Built Infrastructure": 64240
+    },
+    "training_samples": 20000,
+    "holdout_samples": 5000,
+    "pseudo_label_holdout_agreement": 0.974,
+    "feature_importance": {
+      "blue": 0.0458,
+      "green": 0.057,
+      "red": 0.0545,
+      "nir": 0.0902,
+      "swir1": 0.1208,
+      "swir2": 0.0955,
+      "ndvi": 0.1529,
+      "ndwi": 0.105,
+      "iron_swir_nir": 0.0159,
+      "iron_red_blue": 0.0072,
+      "brightness": 0.1009,
+      "ndvi_context_150m": 0.0443,
+      "brightness_context_150m": 0.0212,
+      "distance_to_coal_m": 0.0889
+    },
+    "params": {
+      "n_estimators": 200,
+      "max_depth": 18,
+      "min_samples_leaf": 2,
+      "random_state": 42
+    }
+  },
+  "land_cover_area_ha": {
+    "baseline": {
+      "Undisturbed Vegetation": 3893.6,
+      "Active Mine Pit / Excavation": 595.06,
+      "Overburden / Mineral Stockpile": 1002.07,
+      "Water / Tailings Pond": 55.13,
+      "Haul Roads / Built Infrastructure": 854.14
+    },
+    "target": {
+      "Undisturbed Vegetation": 4073.04,
+      "Active Mine Pit / Excavation": 509.07,
+      "Overburden / Mineral Stockpile": 1097.2,
+      "Water / Tailings Pond": 44.03,
+      "Haul Roads / Built Infrastructure": 676.66
+    }
+  },
+  "change_detection": {
+    "comparable_area_ha": 6400.0,
+    "per_class": {
+      "Undisturbed Vegetation": {
+        "class_id": 0,
+        "baseline_ha": 3893.6,
+        "target_ha": 4073.04,
+        "change_ha": 179.44,
+        "change_pct": 4.61
+      },
+      "Active Mine Pit / Excavation": {
+        "class_id": 1,
+        "baseline_ha": 595.06,
+        "target_ha": 509.07,
+        "change_ha": -85.99,
+        "change_pct": -14.45
+      },
+      "Overburden / Mineral Stockpile": {
+        "class_id": 2,
+        "baseline_ha": 1002.07,
+        "target_ha": 1097.2,
+        "change_ha": 95.13,
+        "change_pct": 9.49
+      },
+      "Water / Tailings Pond": {
+        "class_id": 3,
+        "baseline_ha": 55.13,
+        "target_ha": 44.03,
+        "change_ha": -11.1,
+        "change_pct": -20.13
+      },
+      "Haul Roads / Built Infrastructure": {
+        "class_id": 4,
+        "baseline_ha": 854.14,
+        "target_ha": 676.66,
+        "change_ha": -177.48,
+        "change_pct": -20.78
+      }
+    },
+    "transition_matrix_ha": {
+      "rows_baseline_cols_target": [
+        "Undisturbed Vegetation",
+        "Active Mine Pit / Excavation",
+        "Overburden / Mineral Stockpile",
+        "Water / Tailings Pond",
+        "Haul Roads / Built Infrastructure"
+      ],
+      "values": [
+        [
+          3573.67,
+          35.79,
+          173.79,
+          5.52,
+          104.83
+        ],
+        [
+          37.35,
+          309.96,
+          112.36,
+          5.2,
+          130.19
+        ],
+        [
+          272.56,
+          68.1,
+          549.64,
+          2.77,
+          109.0
+        ],
+        [
+          1.38,
+          6.22,
+          15.25,
+          19.82,
+          12.46
+        ],
+        [
+          188.08,
+          89.0,
+          246.16,
+          10.72,
+          320.18
+        ]
+      ]
+    },
+    "vegetation_lost_to_mining_ha": 209.58
+  },
+  "risk_flags": [
+    {
+      "code": "VEGETATION_LOSS_NEAR_WATER",
+      "severity": "HIGH",
+      "value": 39.87,
+      "unit": "ha",
+      "message": "39.9 ha of vegetation lost within 100 m of water / tailings ponds (runoff and contamination risk)."
+    },
+    {
+      "code": "NEW_STOCKPILE_FORMATION",
+      "severity": "MEDIUM",
+      "value": 29,
+      "unit": "count",
+      "message": "29 new overburden/stockpile bodies (>= 1.0 ha each, 83.6 ha total) absent in the baseline."
+    }
+  ],
+  "risk_metrics": {
+    "veg_loss_near_water_ha": 39.87,
+    "new_stockpile_count": 29,
+    "new_stockpile_ha": 83.6
+  },
+  "hyperspectral": {
+    "method": "Spectral Angle Mapper",
+    "data_source": "SIMULATED EnMAP-like cube (211 bands, 400-2500 nm) synthesised from real Sentinel-2 L2A pixels via linear unmixing + sensor noise; not a measured hyperspectral acquisition",
+    "simulated_snr": 150.0,
+    "angle_threshold_rad": 0.1,
+    "coal_max_albedo": 0.12,
+    "analysed_classes": [
+      1,
+      2
+    ],
+    "pixels_analysed": 160627,
+    "tagged_pct": 100.0,
+    "mean_min_angle_rad": 0.0415,
+    "multispectral_vs_hyperspectral_tag_agreement_pct": 48.55,
+    "composition": {
+      "Coal": {
+        "area_ha": 125.4,
+        "pct_of_tagged": 7.81
+      },
+      "Hematite / Iron Ore": {
+        "area_ha": 288.41,
+        "pct_of_tagged": 17.96
+      },
+      "Kaolinite / Clay Tailings": {
+        "area_ha": 43.78,
+        "pct_of_tagged": 2.73
+      },
+      "Sandstone / Shale Overburden": {
+        "area_ha": 1148.68,
+        "pct_of_tagged": 71.51
+      }
+    },
+    "files": {
+      "reference_library": "mineral_reference_library.json",
+      "signature_plot": "hyperspectral_signatures.png"
+    }
+  },
+  "validation": {
+    "per_date": {
+      "baseline": {
+        "cloud_free_aoi_pct": 100.0,
+        "mean_confidence": 0.8956,
+        "median_confidence": 0.9875,
+        "p10_confidence": 0.6271,
+        "low_confidence_threshold": 0.7,
+        "low_confidence_pct": 13.97
+      },
+      "target": {
+        "cloud_free_aoi_pct": 100.0,
+        "mean_confidence": 0.9136,
+        "median_confidence": 0.9967,
+        "p10_confidence": 0.6746,
+        "low_confidence_threshold": 0.7,
+        "low_confidence_pct": 11.18
+      }
+    },
+    "qa_checks": {
+      "coregistration": {
+        "method": "FFT phase correlation on NIR (B08)",
+        "shift_rows_px": 0.083,
+        "shift_cols_px": -0.005,
+        "shift_px": 0.084,
+        "shift_m": 0.84,
+        "pass": true
+      },
+      "comparable_area_pct": 100.0
+    },
+    "evidence_reliability_grade": "HIGH",
+    "grade_reasons": [
+      "all QA checks passed"
+    ]
+  },
+  "class_legend": {
+    "0": {
+      "name": "Undisturbed Vegetation",
+      "rgb": [
+        46,
+        139,
+        87
+      ]
+    },
+    "1": {
+      "name": "Active Mine Pit / Excavation",
+      "rgb": [
+        35,
+        35,
+        35
+      ]
+    },
+    "2": {
+      "name": "Overburden / Mineral Stockpile",
+      "rgb": [
+        210,
+        160,
+        90
+      ]
+    },
+    "3": {
+      "name": "Water / Tailings Pond",
+      "rgb": [
+        30,
+        120,
+        220
+      ]
+    },
+    "4": {
+      "name": "Haul Roads / Built Infrastructure",
+      "rgb": [
+        220,
+        40,
+        60
+      ]
+    }
+  },
+  "files": {
+    "ingestion": {
+      "baseline": {
+        "bands": "baseline_s2_bands.tif",
+        "scl": "baseline_scl.tif"
+      },
+      "target": {
+        "bands": "target_s2_bands.tif",
+        "scl": "target_scl.tif"
+      },
+      "metadata": "ingestion_metadata.json"
+    },
+    "spectral": {
+      "baseline": {
+        "rgb_cog": "baseline_rgb.tif",
+        "false_color_cog": "baseline_false_color.tif",
+        "indices_cog": "baseline_indices.tif",
+        "rgb_png": "baseline_rgb.png",
+        "false_color_png": "baseline_false_color.png",
+        "ndvi_png": "baseline_ndvi.png"
+      },
+      "target": {
+        "rgb_cog": "target_rgb.tif",
+        "false_color_cog": "target_false_color.tif",
+        "indices_cog": "target_indices.tif",
+        "rgb_png": "target_rgb.png",
+        "false_color_png": "target_false_color.png",
+        "ndvi_png": "target_ndvi.png"
+      }
+    },
+    "model": "landcover_rf.joblib",
+    "classification": {
+      "baseline": {
+        "class_cog": "baseline_landcover.tif",
+        "confidence_cog": "baseline_confidence.tif",
+        "class_png": "baseline_landcover.png",
+        "polygons_geojson": "baseline_landcover.geojson"
+      },
+      "target": {
+        "class_cog": "target_landcover.tif",
+        "confidence_cog": "target_confidence.tif",
+        "class_png": "target_landcover.png",
+        "polygons_geojson": "target_landcover.geojson"
+      }
+    },
+    "hyperspectral": {
+      "reference_library": "mineral_reference_library.json",
+      "signature_plot": "hyperspectral_signatures.png",
+      "mineral_cog": "target_mineral_tags.tif",
+      "mineral_tags_geojson": "target_mineral_tags.geojson"
+    },
+    "new_stockpiles_geojson": "new_stockpiles.geojson",
+    "low_confidence_geojson": "target_low_confidence.geojson"
+  }
+}

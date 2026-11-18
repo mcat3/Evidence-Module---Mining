@@ -1,0 +1,124 @@
+{
+  "aoi_geojson": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          82.5087814,
+          22.3002421
+        ],
+        [
+          82.586421,
+          22.2995014
+        ],
+        [
+          82.5872386,
+          22.3717471
+        ],
+        [
+          82.509559,
+          22.3724904
+        ],
+        [
+          82.5087814,
+          22.3002421
+        ]
+      ]
+    ]
+  },
+  "aoi_area_ha": 6400.0,
+  "crs": "EPSG:32644",
+  "resolution_m": 10.0,
+  "grid_shape": [
+    801,
+    801
+  ],
+  "grid_transform": [
+    10.0,
+    0.0,
+    655420.0,
+    0.0,
+    -10.0,
+    2474840.0
+  ],
+  "search_parameters": {
+    "collection": "sentinel-2-l2a",
+    "window_days": 15,
+    "max_scene_cloud_pct": 20.0,
+    "max_aoi_cloud_pct": 20.0,
+    "masked_scl_classes": [
+      0,
+      1,
+      3,
+      8,
+      9,
+      10
+    ]
+  },
+  "scenes": {
+    "baseline": {
+      "scene_id": "S2A_44QPK_20210301_1_L2A",
+      "reflectance_scale": 0.0001,
+      "reflectance_offset": 0.0,
+      "catalog": "earth-search",
+      "stac_api": "https://earth-search.aws.element84.com/v1",
+      "acquired": "2021-03-01T05:12:41.134000+00:00",
+      "platform": "sentinel-2a",
+      "mgrs_tile": "44QPK",
+      "processing_baseline": "05.00",
+      "scene_cloud_pct": 0.0004,
+      "aoi_cloud_pct": 0.0,
+      "sun_elevation_deg": 53.139,
+      "sun_azimuth_deg": 140.948027677346,
+      "assets": {
+        "B02": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/B02.tif",
+        "B03": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/B03.tif",
+        "B04": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/B04.tif",
+        "B08": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/B08.tif",
+        "B11": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/B11.tif",
+        "B12": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/B12.tif",
+        "SCL": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2021/3/S2A_44QPK_20210301_1_L2A/SCL.tif"
+      },
+      "candidates_considered": 13,
+      "meets_aoi_cloud_threshold": true,
+      "requested_date": "2021-03-01"
+    },
+    "target": {
+      "scene_id": "S2B_44QPK_20240229_0_L2A",
+      "reflectance_scale": 0.0001,
+      "reflectance_offset": 0.0,
+      "catalog": "earth-search",
+      "stac_api": "https://earth-search.aws.element84.com/v1",
+      "acquired": "2024-02-29T05:12:39.384000+00:00",
+      "platform": "sentinel-2b",
+      "mgrs_tile": "44QPK",
+      "processing_baseline": "05.10",
+      "scene_cloud_pct": 0.0,
+      "aoi_cloud_pct": 0.0,
+      "sun_elevation_deg": 52.892,
+      "sun_azimuth_deg": 141.170001555169,
+      "assets": {
+        "B02": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/B02.tif",
+        "B03": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/B03.tif",
+        "B04": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/B04.tif",
+        "B08": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/B08.tif",
+        "B11": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/B11.tif",
+        "B12": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/B12.tif",
+        "SCL": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/44/Q/PK/2024/2/S2B_44QPK_20240229_0_L2A/SCL.tif"
+      },
+      "candidates_considered": 4,
+      "meets_aoi_cloud_threshold": true,
+      "requested_date": "2024-03-01"
+    }
+  },
+  "outputs": {
+    "baseline": {
+      "bands": "baseline_s2_bands.tif",
+      "scl": "baseline_scl.tif"
+    },
+    "target": {
+      "bands": "target_s2_bands.tif",
+      "scl": "target_scl.tif"
+    }
+  }
+}

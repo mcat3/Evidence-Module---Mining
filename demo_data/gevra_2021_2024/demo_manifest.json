@@ -1,0 +1,76 @@
+{
+  "job_id": "26245db7-b98a-5f2a-8ec5-b15bea96c03e",
+  "site_name": "Gevra Open-Cast Coal Mine, Chhattisgarh",
+  "aoi_geojson": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          82.5087814,
+          22.3002421
+        ],
+        [
+          82.586421,
+          22.2995014
+        ],
+        [
+          82.5872386,
+          22.3717471
+        ],
+        [
+          82.509559,
+          22.3724904
+        ],
+        [
+          82.5087814,
+          22.3002421
+        ]
+      ]
+    ]
+  },
+  "target_date": "2024-03-01",
+  "baseline_date": "2021-03-01",
+  "kpis": {
+    "evidence_reliability_grade": "HIGH",
+    "mean_confidence_pct": 91.4,
+    "pit_expansion_ha": -85.99,
+    "pit_expansion_pct": -14.45,
+    "overburden_change_ha": 95.13,
+    "vegetation_change_ha": 179.44,
+    "vegetation_lost_to_mining_ha": 209.58,
+    "new_stockpiles_detected": 29,
+    "risk_flag_count": 2
+  },
+  "evidence": {
+    "package_sha256": "06aa76a0e0a1cb22b3cd0c2667eb3b730437d9b9d464ae1e8fd7ee09508174c9",
+    "package_file_sha256": "63a1c85932b5f51a4e8bc7f3e13f689ffb88e049e12a1c6c7fea90a05e1741cd",
+    "report_sha256": "c47f5066bc1b959341c3a40bc74e162dac0167d4c3d1a9ff93f9857a5b155eaf"
+  },
+  "artifacts": [
+    "baseline_rgb.png",
+    "target_rgb.png",
+    "baseline_false_color.png",
+    "target_false_color.png",
+    "baseline_ndvi.png",
+    "target_ndvi.png",
+    "baseline_landcover.png",
+    "target_landcover.png",
+    "baseline_landcover.geojson",
+    "target_landcover.geojson",
+    "new_stockpiles.geojson",
+    "target_mineral_tags.geojson",
+    "target_low_confidence.geojson",
+    "baseline_rgb.tif",
+    "target_rgb.tif",
+    "baseline_landcover.tif",
+    "target_landcover.tif",
+    "target_confidence.tif",
+    "target_mineral_tags.tif",
+    "hyperspectral_signatures.png",
+    "mineral_reference_library.json",
+    "ingestion_metadata.json",
+    "pipeline_summary.json",
+    "evidence_package.json",
+    "evidence_report.pdf"
+  ]
+}
